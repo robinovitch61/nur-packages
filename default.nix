@@ -18,5 +18,5 @@
   # some-qt5-package = pkgs.libsForQt5.callPackage ./pkgs/some-qt5-package { };
   # ...
   goreleaser-testing = pkgs.callPackage ./pkgs/goreleaser-testing { };
-  #wander = pkgs.callPackage ./pkgs/wander { };
+  wander = pkgs.callPackage ./pkgs/wander { };
 }
