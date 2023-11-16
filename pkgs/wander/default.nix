@@ -9,24 +9,24 @@ system ? builtins.currentSystem
 }:
 let
   shaMap = {
-    i686-linux = "1w9193s10b0kd80ic36anim9svc34cvm0157w57ll30d4wsypdrv";
-    x86_64-linux = "0ziy5k8jphfajrqmbyjdxpxk1m4a3x5l5lqnikpkxj963hb29lab";
-    aarch64-linux = "05pz125nk2byd6jn1gh2jg067a0jvsdgx46azwd9yn8ijyf7fy7i";
-    x86_64-darwin = "12yakhpq01lim680j73689f8hghr83m3rap5f35nja005qbgwksj";
-    aarch64-darwin = "12yakhpq01lim680j73689f8hghr83m3rap5f35nja005qbgwksj";
+    i686-linux = "0559xyy0vfb24fgiqj9s7sn7x0qvyzakzw0waigafmxvkbr583kp";
+    x86_64-linux = "1xalg42x7qfcarn4malqm61vkc5jvg0wlzyx3zmfw94gh7xdqd3b";
+    aarch64-linux = "1lbrw5dxfs4r815s90g7lllmgf6la2s1v730rqxhvqy5a62nva73";
+    x86_64-darwin = "06gmg3pdzspfr52hiq8niblspfi7kms541z84pdyb7ymzijrv7nw";
+    aarch64-darwin = "06gmg3pdzspfr52hiq8niblspfi7kms541z84pdyb7ymzijrv7nw";
   };
 
   urlMap = {
-    i686-linux = "https://github.com/robinovitch61/wander/releases/download/v0.12.5/wander_0.12.5_Linux_i386.tar.gz";
-    x86_64-linux = "https://github.com/robinovitch61/wander/releases/download/v0.12.5/wander_0.12.5_Linux_x86_64.tar.gz";
-    aarch64-linux = "https://github.com/robinovitch61/wander/releases/download/v0.12.5/wander_0.12.5_Linux_arm64.tar.gz";
-    x86_64-darwin = "https://github.com/robinovitch61/wander/releases/download/v0.12.5/wander_0.12.5_Darwin_all.tar.gz";
-    aarch64-darwin = "https://github.com/robinovitch61/wander/releases/download/v0.12.5/wander_0.12.5_Darwin_all.tar.gz";
+    i686-linux = "https://github.com/robinovitch61/wander/releases/download/v0.12.6/wander_0.12.6_Linux_i386.tar.gz";
+    x86_64-linux = "https://github.com/robinovitch61/wander/releases/download/v0.12.6/wander_0.12.6_Linux_x86_64.tar.gz";
+    aarch64-linux = "https://github.com/robinovitch61/wander/releases/download/v0.12.6/wander_0.12.6_Linux_arm64.tar.gz";
+    x86_64-darwin = "https://github.com/robinovitch61/wander/releases/download/v0.12.6/wander_0.12.6_Darwin_all.tar.gz";
+    aarch64-darwin = "https://github.com/robinovitch61/wander/releases/download/v0.12.6/wander_0.12.6_Darwin_all.tar.gz";
   };
 in
 pkgs.stdenv.mkDerivation {
   pname = "wander";
-  version = "0.12.5";
+  version = "0.12.6";
   src = fetchurl {
     url = urlMap.${system};
     sha256 = shaMap.${system};
@@ -46,7 +46,7 @@ pkgs.stdenv.mkDerivation {
   meta = {
     description = "An efficient terminal application/TUI for interacting with your HashiCorp Nomad cluster.";
     homepage = "https://github.com/robinovitch61/wander";
-    license = lib.licenses.MIT;
+    license = lib.licenses.mit;
 
     sourceProvenance = [ lib.sourceTypes.binaryNativeCode ];
 
